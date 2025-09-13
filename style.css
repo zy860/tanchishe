@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#gameCanvas {
+    background-color: #000;
+    border: 2px solid #333;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.mobile-controls {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 200px;
+}
+
+.horizontal-controls {
+    display: flex;
+    gap: 50px;
+    margin: 10px 0;
+}
+
+.mobile-controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    #gameCanvas {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .score-container {
+        width: 300px;
+    }
+    
+    .mobile-controls {
+        display: flex;
+    }
+}
